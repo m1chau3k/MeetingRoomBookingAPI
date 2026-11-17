@@ -4,21 +4,21 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.17.xsd">
 
-    <changeSet id="003-create-bookings-table" author="m1chau3k">
-        <createTable tableName="bookings">
+    <changeSet id="003-create-booking-table" author="m1chau3k">
+        <createTable tableName="booking">
             <column name="id" type="int" autoIncrement="true">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
             <column name="room_id" type="int">
                 <constraints nullable="false"
                 foreignKeyName="fk_booking_room"
-                referencedTableName="rooms"
+                referencedTableName="room"
                 referencedColumnNames="id"/>
             </column>
             <column name="user_id" type="int">
                 <constraints nullable="false"
                 foreignKeyName="fk_booking_user"
-                referencedTableName="users"
+                referencedTableName="user"
                 referencedColumnNames="id"/>
             </column>
             <column name="start_time" type="datetime">
