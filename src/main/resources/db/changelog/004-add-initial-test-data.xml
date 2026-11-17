@@ -1,0 +1,41 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.17.xsd">
+
+    <changeSet id="004-add-initial-test-data" author="m1chau3k">
+        <insert tableName="user">
+            <column name="id" valueNumeric="1"/>
+            <column name="email" value="jan.kowalski@fe.com"/>
+            <column name="full_name" value="Jan Kowalski"/>
+        </insert>
+        <insert tableName="user">
+            <column name="id" valueNumeric="2"/>
+            <column name="email" value="anna.nowak@fe.pl"/>
+            <column name="full_name" value="Anna Nowak"/>
+        </insert>
+
+        <insert tableName="room">
+            <column name="id" valueNumeric="1"/>
+            <column name="name" value="Alpha"/>
+            <column name="capacity" valueNumeric="23"/>
+            <column name="has_projector" valueBoolean="true"/>
+        </insert>
+        <insert tableName="room">
+            <column name="id" valueNumeric="2"/>
+            <column name="name" value="Bravo"/>
+            <column name="capacity" valueNumeric="35"/>
+            <column name="has_projector" valueBoolean="false"/>
+        </insert>
+
+        <insert tableName="booking">
+            <column name="id" valueNumeric="1"/>
+            <column name="room_id" valueNumeric="1"/>
+            <column name="user_id" valueNumeric="1"/>
+            <column name="start_time" valueDate="2026-11-20T10:00:00"/>
+            <column name="end_time" valueDate="2026-11-20T10:30:00"/>
+            <column name="status" value="CONFIRMED"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

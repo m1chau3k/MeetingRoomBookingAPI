@@ -7,4 +7,5 @@
     <include file="changelog/001-create-user-table.xml" relativeToChangelogFile="true"/>
     <include file="changelog/002-create-room-table.xml" relativeToChangelogFile="true"/>
     <include file="changelog/003-create-booking-table.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/004-add-initial-test-data.xml" relativeToChangelogFile="true"/>
 </databaseChangeLog>
